@@ -22,27 +22,13 @@
     </section>
 
 <section class="main-content">
-      <h1 id=""><center>MULTI-TASK DEEP RESIDUAL ECHO SUPPRESSION WITH ECHO-AWARE LOSS
-	  </center></h1>
 
-<center> <a href="https://github.com/echocatzh">Shimin Zhang</a><sup>1</sup>, Ziteng Wang, Jiayao Sun<sup>1</sup>, Yihui Fu<sup>1</sup>, Biao Tian, Qiang Fu, Lei Xie<sup>1</sup></center>
-<center> <sup>1</sup>Audio, Speech and Language Processing Group (ASLP@NPU), Northwestern Polytechnical University, Xi'an, China</center>
 
-<h2>0. Contents</h2>
-<ol>
-  <li><a href="https://echocatzh.github.io/GFTNN/#abstract">Abstract</a></li>
-  <li><a href="https://echocatzh.github.io/GFTNN/#near-end-single-talk">Demos -- ICASSP 2022 AEC-Challenge blind test (near-end single-talk)</a></li>
-  <li><a href="https://echocatzh.github.io/GFTNN/#far-end-single-talk">Demos -- ICASSP 2022 AEC-Challenge blind test (far-end single-talk)</a></li>
-  <li><a href="https://echocatzh.github.io/GFTNN/#double-talk">Demos -- ICASSP 2022 AEC-Challenge blind test (double-talk)</a></li>
-  <li><a href="https://echocatzh.github.io/GFTNN/#full">Demos -- Full 300 clips of ICASSP 2022 AEC-Challenge blind test far-end single-talk scenario</a></li>
-</ol>
 
 <br><br>
-<h2 id="abstract">1. Abstract<a name="abstract"></a></h2>
 <p> 
-This paper introduces the NWPU Team's entry to the ICASSP 2022 AEC Challenge. We take a hybrid approach that cascades a linear AEC with a neural post-filter. The former is used to deal with the linear echo components while the latter suppresses the residual non-linear echo components. We use gated convolutional F-T-LSTM neural network (GFTNN) as the backbone and shape the post-filter by a multi-task learning (MTL) framework, where a voice activity detection (VAD) module is adopted as an auxiliary task along with echo suppression, with the aim to avoid over suppression that may cause speech distortion. Moreover, we adopt an echo-aware loss function, where the mean square error (MSE) loss can be optimized particularly for every time-frequency bins (TF-bins) according to the signal-to-echo ratio (SER), leading to further suppression on the echo. Extensive ablation study shows that the time delay estimation (TDE) module in neural post-filter leads to better perceptual quality, and an adaptive filter with better convergence will bring consistent performance gain for the post-filter. Besides, we find that using the linear echo as the input of our neural post-filter is a better choice than using the reference signal directly. In the ICASSP 2022 AEC-Challenge, our approach has ranked the 1st place on word acceptance rate (WAcc) (0.817) and the 3rd place on both mean opinion score (MOS) (4.502) and the final score (0.864).<br>
-	<center><img src="./GFTNN_files/aec_flow.png" style="height:120px"/></center>
-	<center><img src="./GFTNN_files/system.png" style="height:360px"/></center>
+.<br>
+
 <br><br>
 
 <h2>2. Demos -- Near-end single-talk<a name="near-end-single-talk"></a></h2>
